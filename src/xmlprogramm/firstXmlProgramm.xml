@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <?xml-stylesheet type="text/xsl" href="firstXMLProgramm.xsl"?>
 
-<livingSituation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="firstXmlProgramm.xsd">
+<livingSituation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="firstXmlProgramm.xsd">
 
     <Appartement id="1"> <!-- Wohnung -->
         <Rooms>
@@ -12,96 +13,7 @@
 
                 <LivingRoom>
 
-                    <Furnitures id="lr">
-
-                        <Furniture>
-                            <name>Fernseher</name>
-                            <Description>Eingeschaltet</Description>
-                        </Furniture>
-                       <Furniture>
-                           <name>Couch</name>
-                           <Description>Ausziehbar</Description>
-                       </Furniture>
-
-                    </Furnitures>
-
-                </LivingRoom>
-            </Room>
-
-            <Room id-r="kt">
-
-                <name>Küche</name>
-                <Area unit="qm">7</Area>
-
-                <Kitchen>
-
-                    <Furniture>
-
-                        <Ofen>Eingeschaltet</Ofen>
-                        <Fridge>Der Kühlschrank ist zu 75% gefüllt.</Fridge>
-
-                    </Furniture>
-                </Kitchen>
-            </Room>
-
-            <Room id-r="ba">
-                <name>Badezimmer</name>
-                <Area unit="qm">12</Area>
-
-                <Bath>
-
-                <Furniture>
-
-                    <Toilet>Sauber</Toilet>
-                    <Shower>Wasser läuft.</Shower>
-
-                </Furniture>
-                </Bath>
-            </Room>
-
-            <Room id-r="br">
-                <name>Schlafzimmer</name>
-                <Area unit="qm">28</Area>
-
-                <BedRoom>
-
-                    <Furniture>
-
-                        <Bed>Doppelbett</Bed>
-                        <Wardrobe>Spiegelos</Wardrobe>
-
-                    </Furniture>
-                </BedRoom>
-            </Room>
-
-            <Room id-r="bc">
-                <name>Balkon</name>
-                <Area unit="qm">4</Area>
-
-                <Balcony>
-
-                    <Furniture>
-
-                        <Grill art="Elektro">Würtschen werden gebraten</Grill>
-                        <Parasol>Ausgefahren!</Parasol>
-
-                    </Furniture>
-                </Balcony>
-            </Room>
-
-        </Rooms>
-    </Appartement>
-
-    <House id="2"> <!-- Haus -->
-        <Rooms>
-            <Room id-r="lr">
-
-                <name>Wohnzimmer</name>
-                <Area unit="qm">35</Area>
-
-                <LivingRoom>
-
-                    <Furnitures id="lr">
+                    <Furnitures id="f">
 
                         <Furniture>
                             <name>Fernseher</name>
@@ -124,107 +36,132 @@
 
                 <Kitchen>
 
-                    <Furniture>
-                        <name>Ofen</name>
-                        <Ofen>Eingeschaltet</Ofen>
-                        <name>Kühlschrank</name>
-                        <Fridge>Der Kühlschrank ist zu 75% gefüllt.</Fridge>
+                    <Furnitures id="f">
 
-                    </Furniture>
+                        <Furniture>
+
+                            <name>Ofen</name>
+                            <Description>Eingeschaltet</Description>
+
+                        </Furniture>
+
+
+                        <Furniture>
+
+                            <name>Kühlschrank</name>
+                            <Description>Der Kühlschrank ist zu 75% gefüllt.</Description>
+
+                        </Furniture>
+
+                    </Furnitures>
+
+
+
                 </Kitchen>
             </Room>
 
             <Room id-r="ba">
-
                 <name>Badezimmer</name>
-                <Area unit="qm">15</Area>
+                <Area unit="qm">12</Area>
 
                 <Bath>
 
-                    <Furniture>
+                    <Furnitures id="f">
 
-                        <Toilet>Sauber</Toilet>
-                        <Shower>Wasser läuft.</Shower>
+                        <Furniture>
 
-                    </Furniture>
+                            <name>Toilette</name>
+                            <Toilet>Sauber</Toilet>
+
+                        </Furniture>
+
+                        <Furniture>
+
+                            <name>Dusche</name>
+                            <Description>Wasser läuft.</Description>
+
+                        </Furniture>
+
+
+
+                    </Furnitures>
                 </Bath>
             </Room>
 
             <Room id-r="br">
-
                 <name>Schlafzimmer</name>
-                <Area unit="qm">40</Area>
+                <Area unit="qm">28</Area>
 
                 <BedRoom>
 
-                    <Furniture>
+                    <Furnitures id="f">
 
-                        <Bed>Doppelbett</Bed>
-                        <Wardrobe>Spiegelos</Wardrobe>
+                        <Furniture>
 
-                    </Furniture>
+                            <Bed>Doppelbett</Bed>
+
+                        </Furniture>
+
+                        <Furniture>
+
+                            <name>Kleiderschrank</name>
+                            <Description>Spiegelos</Description>
+
+                        </Furniture>
+
+
+                    </Furnitures>
                 </BedRoom>
             </Room>
 
             <Room id-r="bc">
-
                 <name>Balkon</name>
-                <Area unit="qm">10</Area>
+                <Area unit="qm">4</Area>
 
                 <Balcony>
 
-                    <Furniture>
+                    <Furnitures id="f">
 
-                        <Grill art="Gas">Würtschen, Schweinnacken, Spieße und Käse sind auf dem Grill</Grill>
-                        <Parasol>Ausgefahren!</Parasol>
+                        <Furniture>
 
-                    </Furniture>
+                            <name>Grill</name>
+                            <Description art="Elektro">Würtschen werden gebraten</Description>
+
+                        </Furniture>
+
+                        <Furniture>
+
+                            <name>Sonnenschirm</name>
+                            <Description>Ausgefahren!</Description>
+
+                        </Furniture>
+
+
+                    </Furnitures>
                 </Balcony>
             </Room>
 
-            <Room id-r="gd">
-
-                <name>Garten</name>
-                <Area unit="qm">120</Area>
-
-                <Garden>
-
-                    <Furniture>
-
-                        <SwimmingPool> Kinder schwimmen im mit Wasser gefüllten Pool. </SwimmingPool>
-
-                        <Plants>
-                            <Plant id-p="sf"> Sonnenblumen </Plant>
-
-                            <Plant id-p="mg"> Gänseblümchen </Plant>
-
-                            <Plant id-p="rs"> Rosen </Plant>
-                        </Plants>
-
-                    </Furniture>
-
-                </Garden>
-            </Room>
-
         </Rooms>
-    </House>
+    </Appartement>
 
-    <Dorm id="3"> <!-- Wohnheim -->
+    <Appartement_2 id="2"> <!-- Wohnung -->
         <Rooms>
             <Room id-r="lr">
 
                 <name>Wohnzimmer</name>
-                <Area unit="qm">8</Area>
+                <Area unit="qm">35</Area>
 
                 <LivingRoom>
 
-                    <Furnitures id="lr">
+                    <Furnitures id="f">
 
                         <Furniture>
-                            <Television>Eingeschaltet und ARD läuft.</Television>
+                            <name>Fernseher</name>
+                            <Description>Eingeschaltet</Description>
                         </Furniture>
                         <Furniture>
-                            <Couch>Die Couch ist von Ikea und ist rot.</Couch>
+                            <name>Couch</name>
+                            <Description>Ausziehbar</Description>
                         </Furniture>
 
                     </Furnitures>
@@ -235,68 +172,116 @@
             <Room id-r="kt">
 
                 <name>Küche</name>
-                <Area unit="qm">5</Area>
+                <Area unit="qm">7</Area>
 
                 <Kitchen>
 
-                    <Furniture>
+                    <Furnitures id="f">
 
-                        <Ofen>Ausgeschaltet</Ofen>
-                        <Fridge>Der Kühlschrank ist zu 10% gefüllt.</Fridge>
+                        <Furniture>
 
-                    </Furniture>
+                            <name>Ofen</name>
+                            <Description>Eingeschaltet</Description>
+
+                        </Furniture>
+
+
+                        <Furniture>
+
+                            <name>Kühlschrank</name>
+                            <Description>Der Kühlschrank ist zu 75% gefüllt.</Description>
+
+                        </Furniture>
+
+                    </Furnitures>
+
+
+
                 </Kitchen>
             </Room>
 
             <Room id-r="ba">
-
                 <name>Badezimmer</name>
                 <Area unit="qm">12</Area>
 
                 <Bath>
 
-                    <Furniture>
+                    <Furnitures id="f">
 
-                        <Toilet>Mäßig Sauber</Toilet>
-                        <Shower>Dusche ist ausgeschaltet.</Shower>
+                        <Furniture>
 
-                    </Furniture>
+                            <name>Toilette</name>
+                            <Toilet>Sauber</Toilet>
+
+                        </Furniture>
+
+                        <Furniture>
+
+                            <name>Dusche</name>
+                            <Description>Wasser läuft.</Description>
+
+                        </Furniture>
+
+
+
+                    </Furnitures>
                 </Bath>
             </Room>
 
             <Room id-r="br">
-
                 <name>Schlafzimmer</name>
-                <Area unit="qm">3</Area>
+                <Area unit="qm">28</Area>
 
                 <BedRoom>
 
-                    <Furniture>
+                    <Furnitures id="f">
 
-                        <Bed>Einzelbett</Bed>
-                        <Wardrobe>Spiegelos</Wardrobe>
+                        <Furniture>
 
-                    </Furniture>
+                            <Bed>Doppelbett</Bed>
+
+                        </Furniture>
+
+                        <Furniture>
+
+                            <name>Kleiderschrank</name>
+                            <Description>Spiegelos</Description>
+
+                        </Furniture>
+
+
+                    </Furnitures>
                 </BedRoom>
             </Room>
 
             <Room id-r="bc">
-
                 <name>Balkon</name>
-                <Area unit="qm">2</Area>
+                <Area unit="qm">4</Area>
 
                 <Balcony>
 
-                    <Furniture>
+                    <Furnitures id="f">
 
-                        <Grill art="Electro">Gemüse und Käase werden gebraten</Grill>
-                        <Parasol>Eingefahren!</Parasol>
+                        <Furniture>
 
-                    </Furniture>
+                            <name>Grill</name>
+                            <Description art="Elektro">Würtschen werden gebraten</Description>
+
+                        </Furniture>
+
+                        <Furniture>
+
+                            <name>Sonnenschirm</name>
+                            <Description>Ausgefahren!</Description>
+
+                        </Furniture>
+
+
+                    </Furnitures>
                 </Balcony>
             </Room>
 
         </Rooms>
-    </Dorm>
+    </Appartement_2>
 
 </livingSituation>
