@@ -71,7 +71,7 @@
                         <Furniture>
 
                             <name>Toilette</name>
-                            <Toilet>Sauber</Toilet>
+                            <Description>Sauber</Description>
 
                         </Furniture>
 
@@ -211,7 +211,7 @@
                         <Furniture>
 
                             <name>Toilette</name>
-                            <Toilet>Sauber</Toilet>
+                            <Description>Sauber</Description>
 
                         </Furniture>
 
@@ -221,8 +221,6 @@
                             <Description>Wasser läuft.</Description>
 
                         </Furniture>
-
-
 
                     </Furnitures>
                 </Bath>
@@ -238,7 +236,8 @@
 
                         <Furniture>
 
-                            <Bed>Doppelbett</Bed>
+                            <name>Bett</name>
+                            <Description>Doppelbett</Description>
 
                         </Furniture>
 

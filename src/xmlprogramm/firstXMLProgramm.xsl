@@ -15,13 +15,21 @@
                         <th>Area</th>
                         <th>Furniture</th>
                         <th>Description</th>
+                        <th>Furniture</th>
+                        <th>Description</th>
                     </tr>
                     <xsl:for-each select="livingSituation/Appartement/Rooms/Room">
                         <tr>
                             <td><xsl:value-of select="name"/></td>
                             <td><xsl:value-of select="Area"/></td>
-                            <td><xsl:value-of select=".//*[contains(@id,'f')]/Furniture/name"/></td>
-                            <td><xsl:value-of select=".//*[contains(@id,'f')]/Furniture/Description"/></td>
+                           <!-- <td><xsl:value-of select=".//*[contains(@id,'f')]/Furniture/name"/></td>
+                            <td><xsl:value-of select=".//*[contains(@id,'f')]/Furniture/Description"/></td> -->
+
+                            <xsl:for-each select="*/Furnitures/Furniture">
+                                <td><xsl:value-of select="name"/></td>
+                                <td><xsl:value-of select="Description"/></td>
+                            </xsl:for-each>
+
                         </tr>
                     </xsl:for-each>
                 </table>

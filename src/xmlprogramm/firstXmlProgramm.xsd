@@ -22,6 +22,7 @@
             <xs:enumeration value="Kleiderschrank"/>
             <xs:enumeration value="Grill"/>
             <xs:enumeration value="Sonnenschirm"/>
+            <xs:enumeration value="Bett"/>
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
@@ -34,7 +35,6 @@
           </xs:simpleContent>
         </xs:complexType>
       </xs:element>
-      <xs:element type="xs:string" name="Toilet" minOccurs="0"/>
       <xs:element type="xs:string" name="Bed" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
