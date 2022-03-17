@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="livingSituation" type="livingSituationType"/>
+  <xs:complexType name="AreaType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="unit" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="FurnitureType">
+    <xs:sequence>
+      <xs:element name="name" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Fernseher"/>
+            <xs:enumeration value="Couch"/>
+            <xs:enumeration value="Ofen"/>
+            <xs:enumeration value="Kühlschrank"/>
+            <xs:enumeration value="Toilette"/>
+            <xs:enumeration value="Dusche"/>
+            <xs:enumeration value="Kleiderschrank"/>
+            <xs:enumeration value="Grill"/>
+            <xs:enumeration value="Sonnenschirm"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Description" minOccurs="0">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute type="xs:string" name="art" use="optional"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element type="xs:string" name="Toilet" minOccurs="0"/>
+      <xs:element type="xs:string" name="Bed" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FurnituresType">
+    <xs:sequence>
+      <xs:element type="FurnitureType" name="Furniture" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="LivingRoomType">
+    <xs:sequence>
+      <xs:element type="FurnituresType" name="Furnitures"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RoomType">
+    <xs:sequence>
+      <xs:element name="name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Wohnzimmer"/>
+            <xs:enumeration value="Küche"/>
+            <xs:enumeration value="Badezimmer"/>
+            <xs:enumeration value="Schlafzimmer"/>
+            <xs:enumeration value="Balkon"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="AreaType" name="Area"/>
+      <xs:element type="LivingRoomType" name="LivingRoom" minOccurs="0"/>
+      <xs:element type="KitchenType" name="Kitchen" minOccurs="0"/>
+      <xs:element type="BathType" name="Bath" minOccurs="0"/>
+      <xs:element type="BedRoomType" name="BedRoom" minOccurs="0"/>
+      <xs:element type="BalconyType" name="Balcony" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id-r" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="KitchenType">
+    <xs:sequence>
+      <xs:element type="FurnituresType" name="Furnitures"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BathType">
+    <xs:sequence>
+      <xs:element type="FurnituresType" name="Furnitures"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BedRoomType">
+    <xs:sequence>
+      <xs:element type="FurnituresType" name="Furnitures"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DescriptionType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="art" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="BalconyType">
+    <xs:sequence>
+      <xs:element type="FurnituresType" name="Furnitures"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RoomsType">
+    <xs:sequence>
+      <xs:element type="RoomType" name="Room" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AppartementType">
+    <xs:sequence>
+      <xs:element type="RoomsType" name="Rooms">
+        <xs:annotation>
+          <xs:documentation> Wohnung </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id"/>
+  </xs:complexType>
+  <xs:complexType name="Appartement_2Type">
+    <xs:sequence>
+      <xs:element type="RoomsType" name="Rooms">
+        <xs:annotation>
+          <xs:documentation> Wohnung </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id"/>
+  </xs:complexType>
+  <xs:complexType name="livingSituationType">
+    <xs:sequence>
+      <xs:element type="AppartementType" name="Appartement"/>
+      <xs:element type="Appartement_2Type" name="Appartement_2"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
