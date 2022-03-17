@@ -98,7 +98,8 @@
 
                         <Furniture>
 
-                            <Bed>Doppelbett</Bed>
+                            <name>Bett</name>
+                            <Description>Doppelbett</Description>
 
                         </Furniture>
 

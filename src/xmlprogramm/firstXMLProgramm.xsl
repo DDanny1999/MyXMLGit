@@ -19,6 +19,7 @@
                         <th>Description</th>
                     </tr>
                     <xsl:for-each select="livingSituation/Appartement/Rooms/Room">
+                        <xsl:sort select="Area"/>
                         <tr>
                             <td><xsl:value-of select="name"/></td>
                             <td><xsl:value-of select="Area"/></td>
