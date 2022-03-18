@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="livingSituation" type="livingSituationType"/>
   <xs:complexType name="AreaType">
@@ -10,22 +9,7 @@
   </xs:complexType>
   <xs:complexType name="FurnitureType">
     <xs:sequence>
-      <xs:element name="name">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:enumeration value="Fernseher"/>
-            <xs:enumeration value="Couch"/>
-            <xs:enumeration value="Ofen"/>
-            <xs:enumeration value="Kühlschrank"/>
-            <xs:enumeration value="Toilette"/>
-            <xs:enumeration value="Dusche"/>
-            <xs:enumeration value="Bett"/>
-            <xs:enumeration value="Kleiderschrank"/>
-            <xs:enumeration value="Grill"/>
-            <xs:enumeration value="Sonnenschirm"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:element>
+      <xs:element type="xs:string" name="name"/>
       <xs:element name="Description">
         <xs:complexType>
           <xs:simpleContent>
@@ -50,17 +34,7 @@
   </xs:complexType>
   <xs:complexType name="RoomType">
     <xs:sequence>
-      <xs:element name="name">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:enumeration value="Wohnzimmer"/>
-            <xs:enumeration value="Küche"/>
-            <xs:enumeration value="Badezimmer"/>
-            <xs:enumeration value="Schlafzimmer"/>
-            <xs:enumeration value="Balkon"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:element>
+      <xs:element type="xs:string" name="name"/>
       <xs:element type="AreaType" name="Area"/>
       <xs:element type="LivingRoomType" name="LivingRoom" minOccurs="0"/>
       <xs:element type="KitchenType" name="Kitchen" minOccurs="0"/>
@@ -106,21 +80,21 @@
     <xs:sequence>
       <xs:element type="RoomsType" name="Rooms">
         <xs:annotation>
-          <xs:documentation> Wohnung </xs:documentation>
+          <xs:documentation>Wohnung</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
-    <xs:attribute type="xs:string" name="id"/>
+    <xs:attribute type="xs:byte" name="id"/>
   </xs:complexType>
   <xs:complexType name="Appartement_2Type">
     <xs:sequence>
       <xs:element type="RoomsType" name="Rooms">
         <xs:annotation>
-          <xs:documentation> Wohnung </xs:documentation>
+          <xs:documentation>Wohnung</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
-    <xs:attribute type="xs:string" name="id"/>
+    <xs:attribute type="xs:byte" name="id"/>
   </xs:complexType>
   <xs:complexType name="livingSituationType">
     <xs:sequence>

@@ -6,11 +6,37 @@
 
     <xsl:template match="/">
         <html>
+            <head>
+                <style>
+                    table.customTable {
+                    width: 100%;
+                    background-color: #FFFFFF;
+                    border-collapse: collapse;
+                    border-width: 2px;
+                    border-color: #7ea8f8;
+                    border-style: solid;
+                    color: #000000;
+                    }
+
+                    table.customTable td, table.customTable th {
+                    border-width: 2px;
+                    border-color: #7ea8f8;
+                    border-style: solid;
+                    padding: 5px;
+                    }
+
+                    table.customTable thead {
+                    background-color: #7ea8f8;
+                    }
+                </style>
+
+
+            </head>
             <body>
                 <h2>Living Possibilities</h2>
-                <h3> First Appartement Information</h3>
-                <table border="2">
-                    <tr bgcolor="#ff00ff">
+                <h3>First Appartement Information</h3>
+                <table class="customTable">
+                    <tr bgcolor="#8a2be2">
                         <th>Rooms</th>
                         <th>Area</th>
                         <th>Furniture</th>
@@ -21,22 +47,31 @@
                     <xsl:for-each select="livingSituation/Appartement/Rooms/Room">
                         <xsl:sort select=".//*[contains(@unit,'qm')]" data-type="number" order="ascending"/>
                         <xsl:if test="Area &gt; 10">
-                        <tr>
-                            <td><xsl:value-of select="name"/></td>
-                            <td><xsl:value-of select="Area"/><xsl:value-of select="Area/@unit"/></td>
+                            <tr bgcolor="#778899">
+                                <td>
+                                    <xsl:value-of select="name"/>
+                                </td>
+                                <td>
+                                    <xsl:value-of select="Area"/><xsl:value-of select="Area/@unit"/>
+                                </td>
 
-                            <xsl:for-each select="*/Furnitures/Furniture">
-                                <td><xsl:value-of select="name"/></td>
-                                <td><xsl:value-of select="Description"/></td>
-                            </xsl:for-each>
+                                <xsl:for-each select="*/Furnitures/Furniture">
+                                    <td>
+                                        <xsl:value-of select="name"/>
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="Description"/>
+                                    </td>
+                                </xsl:for-each>
 
-                        </tr>
+                            </tr>
                         </xsl:if>
                     </xsl:for-each>
                 </table>
-                <h3> Second Appartement Information</h3>
-                <table border="1">
-                    <tr bgcolor="#9acd32">
+
+                <h3>Second Appartement Information</h3>
+                <table class="customTable">
+                    <tr bgcolor="#8a2be2">
                         <th>Rooms</th>
                         <th>Area</th>
                         <th>Furnitures</th>
@@ -47,13 +82,21 @@
                     <tr>
                         <xsl:for-each select="livingSituation/Appartement_2/Rooms/Room">
                             <xsl:sort select=".//*[contains(@unit,'qm')]" data-type="number" order="ascending"/>
-                            <tr>
-                                <td><xsl:value-of select="name"/></td>
-                                <td><xsl:value-of select="Area"/><xsl:value-of select="Area/@unit"/></td>
+                            <tr bgcolor="#778899">
+                                <td>
+                                    <xsl:value-of select="name"/>
+                                </td>
+                                <td>
+                                    <xsl:value-of select="Area"/><xsl:value-of select="Area/@unit"/>
+                                </td>
 
                                 <xsl:for-each select="*/Furnitures/Furniture">
-                                    <td><xsl:value-of select="name"/></td>
-                                    <td><xsl:value-of select="Description"/></td>
+                                    <td>
+                                        <xsl:value-of select="name"/>
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="Description"/>
+                                    </td>
                                 </xsl:for-each>
                             </tr>
                         </xsl:for-each>
