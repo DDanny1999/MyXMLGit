@@ -9,7 +9,7 @@
             <body>
                 <h2>Living Possibilities</h2>
                 <h3> First Appartement Information</h3>
-                <table border="1">
+                <table border="2">
                     <tr bgcolor="#ff00ff">
                         <th>Rooms</th>
                         <th>Area</th>
