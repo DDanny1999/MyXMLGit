@@ -132,8 +132,8 @@
 
                         <Furniture>
 
-                            <name>Grill</name>
-                            <Description art="Elektro">Würtschen werden gebraten</Description>
+                            <name art="Elektro">Grill</name>
+                            <Description>Würstchen werden gebraten</Description>
 
                         </Furniture>
 

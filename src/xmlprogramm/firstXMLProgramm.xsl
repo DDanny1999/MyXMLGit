@@ -74,7 +74,7 @@
                     </tr>
                     <xsl:for-each select="livingSituation/Appartement/Rooms/Room">
                         <xsl:sort select=".//*[contains(@unit,'qm')]" data-type="number" order="ascending"/>
-                        <xsl:if test="Area &gt; 10">
+                        <xsl:if test="Area &gt; 10">                                                               <!-- Hier werden nur alle Zimmer die größer als 10qm sind, angezeigt! -->
                             <tr bgcolor="#778899">
                                 <td>
                                     <xsl:value-of select="name"/>
