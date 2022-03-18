@@ -5,6 +5,13 @@
                  xsi:noNamespaceSchemaLocation="firstXmlProgramm.xsd">
 
     <Appartement id="1"> <!-- Wohnung -->
+        <Owner>
+            <name>Markus Mauli</name>
+            <age>43</age>
+            <plz>66113</plz>
+            <ort>Saarbrücken</ort>
+        </Owner>
+
         <Rooms>
             <Room id-r="lr">
 
@@ -17,7 +24,7 @@
 
                         <Furniture>
                             <name>Fernseher</name>
-                            <Description>Ausgeschaltet</Description>
+                            <Description>Eingeschaltet, ZDF läuft.</Description>
                         </Furniture>
                         <Furniture>
                             <name>Couch</name>
@@ -146,11 +153,19 @@
     </Appartement>
 
     <Appartement_2 id="2"> <!-- Wohnung -->
+
+        <Owner>
+            <name>Anna Polsa</name>
+            <age>23</age>
+            <plz>68199</plz>
+            <ort>Mannheim</ort>
+        </Owner>
+
         <Rooms>
             <Room id-r="lr">
 
                 <name>Wohnzimmer</name>
-                <Area unit="qm">35</Area>
+                <Area unit="qm">50</Area>
 
                 <LivingRoom>
 
@@ -158,11 +173,11 @@
 
                         <Furniture>
                             <name>Fernseher</name>
-                            <Description>Eingeschaltet</Description>
+                            <Description>Ausgeschaltet.</Description>
                         </Furniture>
                         <Furniture>
                             <name>Couch</name>
-                            <Description>Ausziehbar</Description>
+                            <Description>Nicht ausziehbar</Description>
                         </Furniture>
 
                     </Furnitures>
@@ -173,7 +188,7 @@
             <Room id-r="kt">
 
                 <name>Küche</name>
-                <Area unit="qm">7</Area>
+                <Area unit="qm">15</Area>
 
                 <Kitchen>
 
@@ -182,7 +197,7 @@
                         <Furniture>
 
                             <name>Ofen</name>
-                            <Description>Eingeschaltet</Description>
+                            <Description>Ausgeschaltet.</Description>
 
                         </Furniture>
 
@@ -190,7 +205,7 @@
                         <Furniture>
 
                             <name>Kühlschrank</name>
-                            <Description>Der Kühlschrank ist zu 75% gefüllt.</Description>
+                            <Description>Der Kühlschrank ist zu 20% gefüllt.</Description>
 
                         </Furniture>
 
@@ -203,7 +218,7 @@
 
             <Room id-r="ba">
                 <name>Badezimmer</name>
-                <Area unit="qm">12</Area>
+                <Area unit="qm">8</Area>
 
                 <Bath>
 
@@ -219,7 +234,7 @@
                         <Furniture>
 
                             <name>Dusche</name>
-                            <Description>Wasser läuft.</Description>
+                            <Description>Wasser läuft nicht.</Description>
 
                         </Furniture>
 
@@ -229,7 +244,7 @@
 
             <Room id-r="br">
                 <name>Schlafzimmer</name>
-                <Area unit="qm">28</Area>
+                <Area unit="qm">30</Area>
 
                 <BedRoom>
 
@@ -238,14 +253,14 @@
                         <Furniture>
 
                             <name>Bett</name>
-                            <Description>Doppelbett</Description>
+                            <Description>Doppelbett, frisch gemacht</Description>
 
                         </Furniture>
 
                         <Furniture>
 
                             <name>Kleiderschrank</name>
-                            <Description>Spiegelos</Description>
+                            <Description>Spiegelschrank, Automatisch schließend</Description>
 
                         </Furniture>
 
@@ -256,7 +271,7 @@
 
             <Room id-r="bc">
                 <name>Balkon</name>
-                <Area unit="qm">4</Area>
+                <Area unit="qm">9</Area>
 
                 <Balcony>
 
@@ -265,14 +280,14 @@
                         <Furniture>
 
                             <name>Grill</name>
-                            <Description art="Elektro">Würtschen werden gebraten</Description>
+                            <Description art="Gas">Gemüse und Käse werden gebraten</Description>
 
                         </Furniture>
 
                         <Furniture>
 
                             <name>Sonnenschirm</name>
-                            <Description>Ausgefahren!</Description>
+                            <Description>Eingefahren!</Description>
 
                         </Furniture>
 

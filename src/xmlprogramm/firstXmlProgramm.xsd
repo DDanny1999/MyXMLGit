@@ -1,5 +1,13 @@
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="livingSituation" type="livingSituationType"/>
+  <xs:complexType name="OwnerType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="name"/>
+      <xs:element type="xs:byte" name="age"/>
+      <xs:element type="xs:int" name="plz"/>
+      <xs:element type="xs:string" name="ort"/>
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="AreaType">
     <xs:simpleContent>
       <xs:extension base="xs:int">
@@ -78,21 +86,23 @@
   </xs:complexType>
   <xs:complexType name="AppartementType">
     <xs:sequence>
-      <xs:element type="RoomsType" name="Rooms">
+      <xs:element type="OwnerType" name="Owner">
         <xs:annotation>
           <xs:documentation>Wohnung</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element type="RoomsType" name="Rooms"/>
     </xs:sequence>
     <xs:attribute type="xs:byte" name="id"/>
   </xs:complexType>
   <xs:complexType name="Appartement_2Type">
     <xs:sequence>
-      <xs:element type="RoomsType" name="Rooms">
+      <xs:element type="OwnerType" name="Owner">
         <xs:annotation>
           <xs:documentation>Wohnung</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element type="RoomsType" name="Rooms"/>
     </xs:sequence>
     <xs:attribute type="xs:byte" name="id"/>
   </xs:complexType>

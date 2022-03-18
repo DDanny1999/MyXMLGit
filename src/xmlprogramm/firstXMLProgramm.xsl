@@ -33,8 +33,36 @@
 
             </head>
             <body>
-                <h2>Living Possibilities</h2>
-                <h3>First Appartement Information</h3>
+                <h2>Living Situations</h2>
+                <h4><em>Owner of the First Appartement:</em></h4>
+                <table class="customTable">
+                    <tr bgcolor="#D2691E">
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>PLZ</th>
+                        <th>Ort</th>
+                    </tr>
+                    <xsl:for-each select="livingSituation/Appartement/Owner">
+                            <tr bgcolor="#7FFFD4">
+                                <td>
+                                    <xsl:value-of select="name"/>
+                                </td>
+                                <td>
+                                    <xsl:value-of select="age"/>
+                                </td>
+                                <td>
+                                    <xsl:value-of select="name"/>
+                                </td>
+                                <td>
+                                    <xsl:value-of select="ort"/>
+                                </td>
+
+                            </tr>
+
+                    </xsl:for-each>
+                </table>
+
+                <h3><u>First Appartement Information:</u></h3>
                 <table class="customTable">
                     <tr bgcolor="#8a2be2">
                         <th>Rooms</th>
@@ -69,7 +97,36 @@
                     </xsl:for-each>
                 </table>
 
-                <h3>Second Appartement Information</h3>
+                <h4><em>Owner of the Second Appartement:</em></h4>
+                <table class="customTable">
+                    <tr bgcolor="#D2691E">
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>PLZ</th>
+                        <th>Ort</th>
+                    </tr>
+                    <xsl:for-each select="livingSituation/Appartement_2/Owner">
+                        <tr bgcolor="#7FFFD4">
+                            <td>
+                                <xsl:value-of select="name"/>
+                            </td>
+                            <td>
+                                <xsl:value-of select="age"/>
+                            </td>
+                            <td>
+                                <xsl:value-of select="name"/>
+                            </td>
+                            <td>
+                                <xsl:value-of select="ort"/>
+                            </td>
+
+                        </tr>
+
+                    </xsl:for-each>
+                </table>
+
+                <h3><u>Second Appartement Information:</u></h3>
+
                 <table class="customTable">
                     <tr bgcolor="#8a2be2">
                         <th>Rooms</th>
